@@ -1,0 +1,24 @@
+
+#proyectos{
+    margin: 30px 30px;
+    background-color: rgb(241, 245, 248);
+    border-radius: 1em;
+    padding-bottom: 2em;
+}
+
+#foto_proyecto{
+    position: relative;
+    margin-left: 10rem;
+    border-radius: 2%;
+    border: 1px solid rgb(117, 117, 121);
+    height: auto;
+    width: 60%;
+}
+.btn.btn-primary{
+    margin-left: 20rem;
+}
+.time{
+    margin-left: 20rem;
+    font-weight: bold;
+    font-size: 14px;
+ } 

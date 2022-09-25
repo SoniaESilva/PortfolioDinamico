@@ -1,0 +1,223 @@
+<div class="container-fluid">
+   <div class="row">
+      <!--barra de administracion sidebar-->
+      <div class="col-3">
+         <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+               <a routerLink="/index" target="_blank"> <button class="nav-link active" id="v-pills-home-tab" type="button">Home</button></a>
+               <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Datos Personales</button>
+               <button class="nav-link" id="v-pills-acerca-tab" data-bs-toggle="pill" data-bs-target="#v-pills-acerca" type="button" role="tab" aria-controls="v-pills-acerca" aria-selected="false">Acerca de mi</button>
+               <button class="nav-link" id="v-pills-exp-tab" data-bs-toggle="pill" data-bs-target="#v-pills-exp" type="button" role="tab" aria-controls="v-pills-exp" aria-selected="false">Experiencia</button>
+               <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Educación</button>
+               <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Hard Skills & Soft Skills</button>
+               <button class="nav-link" id="v-pills-proyecto-tab" data-bs-toggle="pill" data-bs-target="#v-pills-proyecto" type="button" role="tab" aria-controls="v-pills-proyecto" aria-selected="false">Proyectos</button>
+            </div>
+            <!--
+               <div class="tab-content" id="v-pills-tabContent">
+                 
+                 <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">..</div>
+                 <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
+                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+               </div>
+                -->
+         </div>
+      </div>
+      <!--body-->
+      <!--perfil-->
+      <div class="col-6 tab-content" id="v-pills-tabContent">
+         <!--datos personales-->
+         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+            <h5>Editar perfil</h5>
+            <div class="mb-3">
+               <label for="formFileSm" class="form-label">Nombre</label>
+               <input class="form-control form-control-sm" id="formFileSm" type="text">
+               <label for="formFileSm" class="form-label">Apellidos</label>
+               <input class="form-control form-control-sm" id="formFileSm" type="text">
+               
+               <div class="mb-3">
+                  <label for="formFileSm" class="form-label">Título</label>
+                  <input class="form-control form-control-sm" id="formFileSm" type="text">
+                 
+                  <label for="formFileSm" class="form-label">Foto de perfil </label>
+                  <input class="form-control form-control-sm" id="formFileSm" type="file">
+                  <label for="formFileSm" class="form-label">Foto de portada </label>
+                  <input class="form-control form-control-sm" id="formFileSm" type="file">
+               </div>
+               <div class="mb-3">
+                  <button type="button" class="btn btn-outline-primary mt-2">Cancelar</button>
+                  <button type="button" class="btn btn-outline-primary mt-2">Guardar</button>
+               </div>
+            </div>
+         </div><!--cierra tab-pane-->
+         <!--acerca de -->
+         <div class="tab-pane fade" id="v-pills-acerca" role="tabpanel" aria-labelledby="v-pills-acerca-tab" tabindex="0">
+            <div class="col-6 tab-content" id="v-pills-tabContent">
+               <h5>Acerca de mi</h5>
+               <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Breve descripción</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                  <div class="mb-3">
+                     <button type="button" class="btn btn-outline-primary mt-2">Cancelar</button>
+                     <button type="button" class="btn btn-outline-primary mt-2">Guardar</button>
+                  </div>
+               </div>
+            </div>
+         </div><!--cierra tab-pane-->
+         <!--experiencia-->
+         <div class="tab-pane fade" id="v-pills-exp" role="tabpanel" aria-labelledby="v-pills-exp-tab" tabindex="0">
+            <div class="row">
+               <div class="col-6 tab-content" id="v-pills-tabContent">
+                  <h5>Experiencia</h5>
+                  <div class="mb-3">
+                     <label for="formFileSm" class="form-label">Cargo</label>
+                     <input class="form-control form-control-sm" id="formFileSm" type="text">
+                     <div class="mb-3">
+                        <label for="formFileSm" class="form-label">Nombre de la Empresa </label>
+                        <input class="form-control form-control-sm" id="formFileSm" type="text">
+                        </div>
+                        <div class="mb-2">
+                           <label for="formFileSm" class="form-label">Logo</label>
+                           <input class="form-control form-control-sm" id="formFileSm" type="file">
+                        </div>
+                     <div class="mb-3">
+                        <label for="formFileSm" class="form-label">Fecha de Inicio</label>
+                        <div class="col-6">
+                           <input class="form-control form-control-sm" id="formFileSm" type="month">
+                        </div>
+                        <div class="mb-3">
+                           <label for="formFileSm" class="form-label">Fecha de finalización</label>
+                           <div class="col-6">
+                              <input class="form-control form-control-sm" id="formFileSm" type="month">
+                           </div>
+                           <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                              <label class="form-check-label" for="defaultCheck1">Actualidad</label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Breve descripción</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                     </div> 
+                     <div class="mb-3">
+                        <button type="button" class="btn btn-outline-primary mt-2">Cancelar</button>
+                        <button type="button" class="btn btn-outline-primary mt-2">Guardar</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div><!--cierra tab-pane-->
+      <!--Educación-->
+         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+            <div class="row">
+               <div class="col-2"></div>
+               <div class="col-6 tab-content" id="v-pills-tabContent">
+                  <h3>Educación</h3>
+                  <div class="mb-3">
+                     <label for="formFileSm" class="form-label">Institución Educativa </label>
+                     <input class="form-control form-control-sm" id="formFileSm" type="text">
+                  </div>
+                  <div class="mb-2">
+                     <label for="formFileSm" class="form-label">Logo</label>
+                     <input class="form-control form-control-sm" id="formFileSm" type="file">
+                  </div>
+                  <div class="mb-3">
+                     <label for="formFileSm" class="form-label">Título</label>
+                     <input class="form-control form-control-sm" id="formFileSm" type="text">
+                  </div>
+                  <div class="mb-3">
+                     <label for="formFileSm" class="form-label">Fecha de Inicio</label>
+                     <div class="col-6">
+                        <input class="form-control form-control-sm" id="formFileSm" type="month">
+                     </div>
+                     <div class="mb-3">
+                        <label for="formFileSm" class="form-label">Fecha de finalización</label>
+                        <div class="col-6">
+                           <input class="form-control form-control-sm" id="formFileSm" type="month">
+                        </div>
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                           <label class="form-check-label" for="defaultCheck1">Actualidad</label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mb-3">
+                     <button type="button" class="btn btn-outline-primary mt-2">Cancelar</button>
+                     <button type="button" class="btn btn-outline-primary mt-2">Guardar</button>
+                  </div>
+               </div>
+            </div>
+         </div><!--cierra tab-pane-->
+         <!--Hard Skills & Soft Skills-->
+         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+            <div class="row">
+               <div class="col-2"></div>
+               <div class="col-7 tab-content" id="v-pills-tabContent">
+                  <h3>Habilidades</h3>
+                  <div class="mb-3">
+                     <input class="form-control form-control-sm" id="formFileSm" type="text" placeholder="Habilidad 1">
+                     <input type="range" class="progress-bar" role="progressbar" aria-label="Example 1px high" style="width: 100%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                  <div class="mb-3">
+                     <input class="form-control form-control-sm" id="formFileSm" type="text" placeholder="Habilidad 2">
+                     <input type="range" class="progress-bar" role="progressbar" aria-label="Example 20px high" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                     </div>
+                  <div class="mb-3">
+                     <input class="form-control form-control-sm" id="formFileSm" type="text" placeholder="Habilidad 3">
+                     <input type="range" class="progress-bar" role="progressbar" aria-label="Example 1px high" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                     </div>
+                  <div class="mb-3">
+                     <input class="form-control form-control-sm" id="formFileSm" type="text" placeholder="Habilidad 4">
+                     <input type="range" class="progress-bar" role="progressbar" aria-label="Example 20px high" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                   </div>
+                  <div class="mb-3">
+                     <input class="form-control form-control-sm" id="formFileSm" type="text" placeholder="Habilidad 5">
+                     <input type="range" class="progress-bar" role="progressbar" aria-label="Example 1px high" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                   </div>
+                  <div class="mb-3">
+                     <input class="form-control form-control-sm" id="formFileSm" type="text" placeholder="Habilidad 6">
+                     <input type="range" class="progress-bar" role="progressbar" aria-label="Example 1px high" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                     </div>
+                  <div class="mb-3">
+                     <button type="button" class="btn btn-outline-primary mt-2">Cancelar</button>
+                     <button type="button" class="btn btn-outline-primary mt-2">Guardar</button>
+                  </div>
+               </div>
+            </div>
+         </div><!--cierra tab-pane-->
+         <!--Proyectos-->
+         <div class="tab-pane fade" id="v-pills-proyecto" role="tabpanel" aria-labelledby="v-pills-proyecto-tab" tabindex="0">
+            <div class="row">
+               <div class="col-2"></div>
+               <div class="col-7 tab-content" id="v-pills-tabContent">
+                  <h3 class="text-center">Proyectos</h3>
+                  <div class="mb-3">
+                     <label for="formFileSm" class="form-label">Nombre del Proyecto</label>
+                     <input class="form-control form-control-sm" id="formFileSm" type="text">
+                  </div>
+                  <div class="mb-3">
+                     <label for="formFileSm" class="form-label">Breve descripción</label>
+                     <label for="exampleFormControlTextarea1" class="form-label"></label>
+                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                     <label for="formFileSm" class="form-label">Foto del proyecto</label>
+                     <input class="form-control form-control-sm" id="formFileSm" type="file">
+                  </div>
+                  <div class="mb-3">
+                     <label for="formFileSm" class="form-label">URL</label>
+                    <input class="form-control form-control-sm" id="formFileSm" type="url">
+                  </div>
+                  <div class="mb-3">
+                     <button type="button" class="btn btn-outline-primary mt-2">Cancelar</button>
+                     <button type="button" class="btn btn-outline-primary mt-2">Guardar</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div><!--cierra col-7-->
+   </div><!--cierra tab-pane-->
+</div><!--cierra div padre--> 
+
+
+                
+             

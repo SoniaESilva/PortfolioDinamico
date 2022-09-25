@@ -1,0 +1,26 @@
+/*icon*/
+i.fa-brands.fa-instagram.fa-xl,
+i.fa-brands.fa-linkedin.fa-xl,
+i.fa-brands.fa-github.fa-xl,
+i.fa-solid.fa-user.fa-xl,
+i.fa-solid.fa-user-lock.fa-xl{
+    color: rgb(7, 7, 7);
+}
+i.fa-brands.fa-github.fa-xl:hover{
+    color:rgb(103, 99, 99);
+}
+i.fa-brands.fa-instagram.fa-xl:hover{
+    color:rgb(198, 9, 163);
+}
+i.fa-brands.fa-linkedin.fa-xl:hover{
+    color:rgb(8, 73, 171);
+}
+i.fa-solid.fa-user.fa-xl:hover,
+i.fa-solid.fa-user-lock.fa-xl:hover {
+    color:blue;
+}
+li.list-group-item{
+    background: transparent;
+    border: none;
+    
+}

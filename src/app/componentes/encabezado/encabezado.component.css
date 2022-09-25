@@ -1,0 +1,19 @@
+header{
+    top:0;
+}
+/*navar*/
+.navbar.navbar-expand-lg.bg-secundary{
+    background: rgb(105,179,180);
+    background: linear-gradient(0deg, rgba(105,179,180,1) 0%, rgba(86,101,166,1) 100%);
+}
+
+/* banner*/
+.banner{
+    background-image: url(/assets/img/banner.jpg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+   }

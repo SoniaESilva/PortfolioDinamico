@@ -1,0 +1,11 @@
+#hard_soft_skills{
+    margin: 30px 30px;
+    background-color: rgb(241, 245, 248);
+    border-radius: 1em;
+    padding-bottom: 2em;
+
+}
+/*progress*/
+.progress{
+    background-color: rgb(190, 193, 194);
+}
