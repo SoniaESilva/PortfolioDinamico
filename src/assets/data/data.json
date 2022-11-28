@@ -1,0 +1,105 @@
+{
+	"nombre":"Sonia Elisabet",
+	"apellido": "Silva",
+	"banner":"../../../assets/img/banner.png",
+	"fotop":"../../../assets/img/fotoperfil.png",
+	"titulo":"Developer Full Stack",
+	"acerca":"Mi nombre es Sonia, voy adaptandome a los cambios estando en continua innovación. Me gusta afrontar los desafíos dando siempre lo mejor de mí.",
+	"experiencia":[
+	{
+		"id":1,
+		"puesto":"Asesora Comercial",
+		"empresa":"Smg Life",
+		"logo":"../../../assets/img/logo_SMG.png",
+		"fechai":"Julio 2013",
+		"fechaf":"Diciembre 2020",
+		"descripcion":"Comencé en el call center de la compañía, ofreciendo seguros enlatados de salud y sepelio manejando varios sponsor. Luego cambie de sector, donde asesoraba a socios del grupo SMG haciendo cross selling de los seguros de vida, ahorro y capitalización."
+	},
+	{
+		"id":2,
+		"puesto":"Telemarketer",
+		"empresa":"Clienting Group",
+		"logo":"../../../assets/img/clienting.jpg",
+		"fechai":"Febrero 2010",
+		"fechaf":"Junio 2013",
+		"descripcion":"Realizaba venta de productos intangibles de manera telefónica seguros de vida, salud y hogar manejando varios sponsor."
+
+	}
+],
+    "educacion":[
+		{
+		"id":1,
+		"establecimiento":"Argentina Programa",
+		"titulo":"Developer Full Stack",
+		"fechai":"Junio 2022",
+		"fechaf":"Enero 2023",
+		"logo":"../../../assets/img/arg-programa.png"
+	},
+	{   
+		"id":2,
+	    "establecimiento":"Aapas",
+		"titulo":"Productor Asesor de Seguros",
+		"fechai":"Octubre 2013",
+		"fechaf":"Abril 2014",
+		"logo":"../../../assets/img/aapas.png"
+	},
+	{   
+		"id":3,
+	    "establecimiento":"Colegio Secundario Juan B. Justo",
+		"titulo":"Bachiller en Gestión y Administración",
+		"fechai":"Marzo 1993",
+		"fechaf":"Diciembre 1997",
+		"logo":"../../../assets/img/juanbjusto.jpg"
+	}
+],
+    "skills":[
+	{
+		 "id":1,
+         "habilidad":"Html",
+		 "porcentaje":"55"
+	},
+	{
+		"id":2,
+		"habilidad":"Css",
+		"porcentaje":"35"
+   },
+   {
+	    "id":3,
+	    "habilidad":"Boostrap",
+	    "porcentaje":"20"
+   },
+   {
+	    "id":4,
+	    "habilidad":"Proactiva",
+	    "porcentaje":"65"
+   },
+   {
+        "id":5,
+	    "habilidad":"Trabajo en equipo y comunicación",
+		"porcentaje":"60"
+   },
+   {
+	    "id":6,
+	    "habilidad":"Adaptabilidad al cambio",
+	    "porcentaje":"80"
+}
+],
+    "proyectos":[
+	{
+		"id":1,
+		"nombre":"Portfolio",
+		"fecha":"julio 2022",
+		"foto":"https://assets.asana.biz/m/2729b34d99aa7f91/original/article-project-planning-project-design-2x.jpg",
+		"descripcion":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore itaque sequi est hic. Maxime aspernatur tempore dolorem placeat non dolor aperiam, unde quo neque. Iure ipsa ex aperiam perferendis voluptatem.",
+		"url":"https://github.com/SoElSi80/Proyectofinalfrontend/commit/e73af0cb9fcf85e35944431f80aee7122e0a9927#diff-0eb547304658805aad788d320f10bf1f292797b5e6d745a3bf617584da017051"
+	},
+	{
+		"id":2,
+		"nombre":"Dashboard",
+		"fecha":"julio 2022",
+		"foto":"https://blogs.iadb.org/conocimiento-abierto/wp-content/uploads/sites/10/2019/09/banner-siete-pasos-gestion-proyectos.jpg",
+		"descripcion":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore itaque sequi est hic. Maxime aspernatur tempore dolorem placeat non dolor aperiam, unde quo neque. Iure ipsa ex aperiam perferendis voluptatem.",
+		"url":"https://github.com/SoElSi80/Proyectofinalfrontend/blob/main/dashboard.html"
+	}
+]
+}

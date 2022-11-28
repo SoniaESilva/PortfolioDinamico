@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +21,16 @@ import { EncabezadodashboardComponent } from './componentes/encabezado/dashboar/
 import { LogoutComponent } from './componentes/logout/logout.component';
 import { RedesdashboardComponent } from './componentes/redesdashboard/redesdashboard.component';
 import { SidebarComponent } from './componentes/sidebar/sidebar.component';
+import { DatosPersonalesComponent } from './componentes/modales/datos-personales/datos-personales.component';
+import { AcercaDashboardComponent } from './componentes/modales/acerca-dashboard/acerca-dashboard.component';
+import { ExperienciaDashboardComponent } from './componentes/modales/experiencia-dashboard/experiencia-dashboard.component';
+import { EducacionDashboardComponent } from './componentes/modales/educacion-dashboard/educacion-dashboard.component';
+import { SkillsDashboardComponent } from './componentes/modales/skills-dashboard/skills-dashboard.component';
+import { ProyectosDashboardComponent } from './componentes/modales/proyectos-dashboard/proyectos-dashboard.component';
+import { PortfolioService } from './servicios/portfolio.service';
+
+
+
 
 
 
@@ -40,13 +53,21 @@ import { SidebarComponent } from './componentes/sidebar/sidebar.component';
     LogoutComponent,
     RedesdashboardComponent,
     SidebarComponent,
-   
-   ],
+    DatosPersonalesComponent,
+    AcercaDashboardComponent,
+    ExperienciaDashboardComponent,
+    EducacionDashboardComponent,
+    SkillsDashboardComponent,
+    ProyectosDashboardComponent,
+    
+  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [PortfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

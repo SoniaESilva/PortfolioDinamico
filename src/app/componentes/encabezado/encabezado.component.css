@@ -9,7 +9,6 @@ header{
 
 /* banner*/
 .banner{
-    background-image: url(/assets/img/banner.jpg);
     height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;

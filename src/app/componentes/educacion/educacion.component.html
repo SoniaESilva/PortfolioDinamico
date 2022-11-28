@@ -1,45 +1,18 @@
-<!--educacion-->
 <section id="educacion">
     <div  class="container-fluid">
-       <div class="row">
-          <h2 class="text-center">Educación</h2>
-          <div class="col-2 text-center">
-             <img src="./assets/img/arg-programa.png" class="img-fluid w-50" alt="logo_argentina_programa">
+      <h2 class="text-center">{{ title }}</h2>
+      <div class="row" *ngFor="let educacion of educacionList">
+         <div class="col-2 text-center" >
+             <img [src]="educacion.logo" class="img-fluid" alt="logo_argentina_programa">
              <br>
-             <time class="fecha">Junio 2022 - Actualidad</time>
+             <time class="fecha">{{ educacion.fechai }}-{{ educacion.fechaf }}</time>
           </div>
-          <div class="col-8">
+          <div class="col-7">
              <ul>
-                <li><h4>Argentina Programa</h4></li>
-                   <h5>Developer Full-Stack Jr</h5>
+                <li><h5>{{ educacion.establecimiento }}</h5></li>
+                   <small>{{ educacion.titulo }}</small>
                 </ul>
              </div>
-       </div><!--cierra row-->
-       <div class="row">
-          <div class="col-2 text-center">
-             <img src="./assets/img/aapas.png" class="img-fluid w-30 h-50"alt="logo_aapas">
-             <br>
-             <time class="fecha">Octubre 2013 - Abril 2014</time>
-          </div>
-          <div class="col-8">
-             <ul>
-                <li><h4>Aapas</h4></li>
-                    <h5>Productor Asesor de Seguros</h5>
-                   </ul>
-             </div>
-       </div><!--cierra row-->
-       <div class="row">
-          <div class="col-2 text-center">
-             <img src="#" class="img-fluid" alt="..">
-             <br>
-             <time class="fecha">Marzo 1993 - Diciembre 1997</time>
-          </div>
-          <div class="col-8">
-             <ul>
-                <li><h5>Colegio Secundario Juan B. Justo</h5></li>
-                    <h6>Bachiller en Gestión y Administración</h6>
-                   </ul>
-             </div>
-       </div><!--cierra row-->
-   </div><!--cierra container-->
+       </div>
+   </div>
   </section>

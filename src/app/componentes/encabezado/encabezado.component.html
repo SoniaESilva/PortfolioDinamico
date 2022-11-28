@@ -1,10 +1,9 @@
-
-<header class="banner"><!--banner-->
+<header class="banner" [ngStyle]="{'background-image':datos.banner}"><!--banner-->
     <!-- navbar-->
     <nav class="navbar navbar-expand-lg bg-secundary">
        <div class="container-fluid">
           <a class="navbar-brand" href="#">
-          <img src="/assets/img/APLogo-20-20.png" alt="logo_argentina_programa" width="10%">
+          <img src="./assets/img/APLogo-20-20.png" alt="logo_argentina_programa" width="10%">
           </a>
           <app-redes></app-redes>
        </div><!--cierra container-fluid-->

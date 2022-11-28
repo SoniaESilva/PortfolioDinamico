@@ -1,5 +1,5 @@
 #experiencia{
-    margin: 30px 30px;
+    margin:60px;
     background-color: rgb(241, 245, 248);
     border-radius: 1em;
     padding-bottom: 2em;
@@ -11,4 +11,7 @@
 }
 ul{
    list-style: none;
+}
+.empresa{
+    font-weight: bold;
 }
