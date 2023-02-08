@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {PortfolioService } from '../../servicios/portfolio.service';//Importamos el servicio
+import { Perso } from 'src/app/entidad/perso';
+import { PersoService } from 'src/app/servicios/perso.service';
+
 @Component({
   selector: 'app-acerca-de',
   templateUrl: './acerca-de.component.html',
@@ -8,16 +10,21 @@ import {PortfolioService } from '../../servicios/portfolio.service';//Importamos
 export class AcercaDeComponent implements OnInit {
  //Inicializar variables de instancia para almacenar los datos
    title:string='Acerca de mí';
-   data:any;
+   info:any;
+   
+   
 
  // Inyectar el servicio para tener acceso en la clase a los métodos
-  constructor(private portfolioService: PortfolioService) { }
+  constructor(private sPersona : PersoService) { }
       
   ngOnInit(): void {
- //Esto es almacenar enla variable de instancia los datos recuperado por el servicio
-    this.portfolioService.getDatos().subscribe(portfolio=>{
-  //definir informacion a mostrar
-    this.data=portfolio;
-  });
+  this.traerPersona()//usando expeService
   }
+
+  traerPersona(): void {
+   this.sPersona.getById(1).subscribe(data => {
+    this.info=data;
+   });
+   }
+   
 }

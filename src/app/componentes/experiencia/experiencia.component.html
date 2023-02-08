@@ -1,17 +1,18 @@
 <section id="experiencia">
     <div class="container-fluid">
        <h2 class="text-center">{{ title }}</h2>
-       <div class="row" *ngFor="let experiencia of experiencias">
+       <div class="row" *ngFor="let experiencia of experienciaList">
           <div class="col-2 text-center" >
-             <img [src]="experiencia.logo" class="img-fluid w-50" alt="logo_smg_life">
+             <img [src]="experiencia.logo" class="img-fluid w-50" alt=" ">
              <br>
-             <time class="fecha">{{ experiencia.fechai }}-{{ experiencia.fechaf }}</time>
+             <time class="fecha">{{ experiencia.fechaInicio }}-{{ experiencia.fechaFin }}</time>
           </div>
           <div class="col-8">
              <ul>
                 <li><h4>{{experiencia.puesto }}</h4></li>
                 <small class="empresa">{{ experiencia.empresa }}</small>
                 <p>{{ experiencia.descripcion }}</p>
+                
              </ul>
              </div>
        </div>

@@ -6,14 +6,21 @@ import { HttpClient }from '@angular/common/http';//Esto es para hacer peticiones
   providedIn: 'root'
 })
 export class PortfolioService {
-//El primer http se llama alias
+  //traigo los datos de backend
+url:string="http://localhost:8080/persona/lista"
+
+
   constructor(private http:HttpClient){}
 //Método observable que devuelve los datos
+
   getDatos():Observable<any> {
-    //Se llama al JSON con su path -ruta-
-      return this.http.get('../assets/data/data.json');
+ //Se llama al JSON con su path -ruta-
+    //return this.http.get('../assets/data/data.json');
+    return this.http.get<any>(this.url);
+  }
       
-    }
+    
+ 
 }
 
 

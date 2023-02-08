@@ -1,0 +1,86 @@
+<div class="modal fade" id="proyectoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Proyectos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="proyectoform">
+        <div class="modal-body">
+           <input type="hidden" name="id">
+          <ul class="p-0">
+            <li *ngFor="let proyectos of proyectosList" class="d-flex justify-content-between align-items-center m-1 ">
+              <span>{{proyectos.id}} {{proyectos.nombre|uppercase}}</span>
+              <span class="d-flex justify-content-between gap-2">
+                <!--editar-->
+                <button type="button" class="btn btn-sm btn-outline-dark pl-1 pr-1 m-0"
+                  (click)="cargarDetalle(proyectos.id)">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+                <!--borrar-->
+                <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0"
+                  (click)="borrar(proyectos.id)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </span>
+            </li>
+          </ul>
+           <!--esto es la validacion  renderizado condicional-->
+           <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+             <div class="input-group-prepend border-0">
+               <span class="input-group-text border-0" id="basic-addon1">ID:</span>
+             </div>
+             <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
+           </div>
+         <h3>Proyecto</h3>
+          <div class="mb-3">
+            <label for="nombreProyed" class="form-label">Nombre</label>
+            <input class="form-control"[ngClass]="{'is-invalid': form.get('nombre')?.errors && form.get('nombre')?.touched, 'is-valid': form.get('nombre')?.errors && form.get('nombre')?.touched}" formControlName="nombre" id="nombreProyed" type="text" >
+            <p class="text-danger" *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['required']">
+              El nombre es requerido.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="fotoProye" class="form-label">Foto del proyecto</label>
+            <input  class="form-control"  [ngClass]="{'is-invalid': form.get('foto')?.errors && form.get('foto')?.touched, 'is-valid': form.get('foto')?.errors && form.get('foto')?.touched}"formControlName="foto" id="fotoProye"type="url">
+            <p class="text-danger" *ngIf="form.get('foto')?.touched && form.get('foto')?.errors?.['required']">
+              La foto es requerida.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="urlEdit" class="form-label">URL</label>
+            <input class="form-control" [ngClass]="{'is-invalid': form.get('url')?.errors && form.get('url')?.touched, 'is-valid': form.get('url')?.errors && form.get('url')?.touched}" formControlName="url" id="urlEdit" type="url" >
+            <p class="text-danger" *ngIf="form.get('url')?.touched && form.get('url')?.errors?.['required']">
+              La URL es requerida.
+            </p>
+         </div>
+
+         <div class="mb-3">
+           <label for="descripcionProyed" class="form-label">Descripción</label>
+           <textarea class="form-control" [ngClass]="{'is-invalid': form.get('descripcion')?.errors && form.get('descripcion')?.touched, 'is-valid': form.get('descripcion')?.errors && form.get('descripcion')?.touched}"formControlName="descripcion" id="descripcionProyed" rows="2" ></textarea>
+           <p class="text-danger" *ngIf="form.get('descripcion')?.touched && form.get('descripcion')?.errors?.['required']">
+            La descripción es requerido.
+           </p>
+         </div>
+
+         <div class="mb-3">
+           <div class="col-6">
+            <label for="fecha" class="form-label">Fecha</label>
+            <input  class="form-control" [ngClass]="{'is-invalid': form.get('fecha')?.errors && form.get('fecha')?.touched, 'is-valid': form.get('fecha')?.errors && form.get('fecha')?.touched}"  formControlName="fecha" id="fecha" type="fecha">
+            <p class="text-danger" *ngIf="form.get('fecha')?.touched && form.get('fecha')?.errors?.['required']">
+              La fecha es requerida.
+            </p>
+           </div>
+        </div>
+    <div class="modal-footer">
+            <button type="button" (click)="limpiar()" class="btn btn-outline-primary mt-2" title="limpiar">Cancelar</button>
+            <button button type="submit" class="btn btn-outline-primary mt-2" title="guardar">Guardar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

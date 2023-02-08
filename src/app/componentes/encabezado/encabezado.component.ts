@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';//Importamos el servicio
+import { Perso } from 'src/app/entidad/perso';
+import { PersoService } from 'src/app/servicios/perso.service';
 
 
 @Component({
@@ -8,17 +9,18 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';//Importa
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-  datos:any;
+  info:any;
 
 
   // Inyectar el servicio para tener acceso en la clase a los métodos
-  constructor(private portfolioservicio: PortfolioService) { }
+  constructor(private sPersona : PersoService) { }
 
   ngOnInit(): void {
-   //Esto es almacenar enla variable de instancia los datos recuperado por el servicio
-   this.portfolioservicio.getDatos().subscribe(portfolio=>{
-   //definir informacion a mostrar
-      this.datos=portfolio;
-    });
+    this.traerPersona()//usando expeService
   }
+  traerPersona(): void {
+    this.sPersona.getById(1).subscribe(data => {
+     this.info=data;
+    });
+    }
 }

@@ -1,9 +1,9 @@
 <section id="hard_soft_skills">
    <h2>{{ title }}</h2>
     <div class="container-fluid" >
-      <div class="row"*ngFor="let skill of skills">
+      <div class="row"*ngFor="let skill of skillList">
          <div class="col-3">
-            <span class="habilidad">{{ skill.habilidad }}</span>
+            <span class="habilidad">{{ skill.nombreHabilidad }}</span>
          </div>
          <div class="col-5">
              <div class="progress mb-3" style="height: 20px;" > 

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from '../../servicios/portfolio.service';//Importamos el servicio
+import { EduService } from 'src/app/servicios/edu.service';
+import { Edu } from 'src/app/entidad/edu';
+
+
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
@@ -7,16 +10,18 @@ import { PortfolioService } from '../../servicios/portfolio.service';//Importamo
 })
 export class EducacionComponent implements OnInit {
   title:string="Educación";
-  educacionList:any;
+  educacionList: Edu [] = [];
+  
 
   // Inyectar el servicio para tener acceso en la clase a los métodos
-  constructor(private portfolioservice: PortfolioService) { }
+  constructor(private sEducacion : EduService) {}
 
   ngOnInit(): void {
-    //Esto es almacenar enla variable de instancia los datos recuperado por el servicio
-    this.portfolioservice.getDatos().subscribe(portfolio=>{
-  //definir informacion a mostrar
-     this.educacionList=portfolio.educacion;
-    });
+   this.traerEducacion();//usando eduService 
   }
+  //para traer la lista de educacion desde eduService 
+  traerEducacion(): void {
+    this.sEducacion.lista().subscribe(data =>{this.educacionList=data});
+   }
+  
 }

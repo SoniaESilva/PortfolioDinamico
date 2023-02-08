@@ -1,0 +1,88 @@
+<div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Educación</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionform">
+          <div class="modal-body">
+             <input type="hidden" name="id">
+            <ul class="p-0">
+              <li *ngFor="let educacion of educacionList" class="d-flex justify-content-between align-items-center m-1 ">
+                <span>{{educacion.id}}. {{educacion.establecimiento|uppercase}}</span>
+                <span class="d-flex justify-content-between gap-2">
+                  <!--editar-->
+                  <button type="button" class="btn btn-sm btn-outline-dark pl-1 pr-1 m-0"
+                    (click)="cargarDetalle(educacion.id)">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <!--borrar-->
+                  <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0"
+                    (click)="borrar(educacion.id)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </span>
+              </li>
+            </ul>
+             <!--esto es la validacion  renderizado condicional-->
+             <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+              <div class="input-group-prepend border-0">
+                <span class="input-group-text border-0" id="basic-addon1">ID:</span>
+              </div>
+              <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
+            </div>
+
+           <h3>Educación</h3>
+            <div class="mb-3">
+                 <label for="establecimientoEdit" class="form-label">Establecimiento</label>
+                 <input class="form-control"[ngClass]="{'is-invalid': form.get('establecimiento')?.errors && form.get('establecimiento')?.touched, 'is-valid': form.get('establecimiento')?.errors && form.get('establecimiento')?.touched}" id="establecimientoEdit" formControlName="establecimiento" type="text">
+                 <p class="text-danger" *ngIf="form.get('establecimiento')?.touched && form.get('establecimiento')?.errors?.['required']">
+                   El establecimiento es requerido.
+                 </p>
+               </div>
+          
+               <div class="mb-3">
+                 <label for="tituloEdit" class="form-label">Título</label>
+                 <input class="form-control" [ngClass]="{'is-invalid': form.get('titulo')?.errors && form.get('titulo')?.touched, 'is-valid': form.get('titulo')?.errors && form.get('titulo')?.touched}"id="tituloEdit" formControlName="titulo"type="text" >
+                 <p class="text-danger" *ngIf="form.get('titulo')?.touched && form.get('titulo')?.errors?.['required']">
+                   El título es requerido.
+                 </p>
+               </div>
+          
+               <div class="mb-3">
+                 <label for="logoEdit" class="form-label">Logo</label>
+                 <input class="form-control" id="logoEdit" formControlName="logo"type="url">
+              </div>
+          
+              <div class="mb-3">
+                <div class="col-6">
+                   <label for="fechaInicioEdu" class="form-label">Fecha de Inicio</label>
+                <input class="form-control" id="fechaInicioEdu"  formControlName="fechaInicio"type="fecha" >
+                </div>
+             </div>
+          
+              <div class="mb-3">
+                <div class="col-6">
+                   <label for="fechaFinEdu" class="form-label">Fecha de Finalización</label>
+                   <input class="form-control" id="fechaFinEdu"  formControlName="fechaFin" type="fecha" >
+                </div>
+             </div>
+          
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefaultEdu"
+                  formControlName="esEstudioActual">
+                <label class="form-check-label" for="flexSwitchCheckDefaultEdu">Es Estudio Actual?</label>
+              </div>
+          
+ 
+           <div class="modal-footer">
+              <button type="button" (click)="limpiar()" class="btn btn-outline-primary mt-2" title="limpiar">Cancelar</button>
+              <button button type="submit" class="btn btn-outline-primary mt-2" title="guardar" >Guardar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

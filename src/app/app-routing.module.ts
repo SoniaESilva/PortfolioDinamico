@@ -5,10 +5,10 @@ import { IndexComponent } from './componentes/index/index.component';
 
 
 const routes: Routes = [
+  {path: 'index', component:IndexComponent},
   {path: '', component:IndexComponent},
   {path: 'dashboard', component:DashboardComponent}
-  
-  ];
+ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

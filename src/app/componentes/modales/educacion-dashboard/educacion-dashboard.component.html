@@ -1,42 +1,55 @@
-    <div class="col-6 tab-content" id="v-pills-tabContent">
-         <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><i class="fa-solid fa-pen-to-square" type="button"></i></li>
-            <li class="list-group-item"><i class="fa-solid fa-trash-can" type="button"></i></li>
-         </ul>
-         <h3>Educación</h3>
-         <div class="mb-3">
-            <label for="formFileSm" class="form-label">Institución Educativa </label>
-            <input class="form-control form-control-sm" id="formFileSm" type="text">
-         </div>
-         <div class="mb-2">
-            <label for="formFileSm" class="form-label">Logo</label>
-            <input class="form-control form-control-sm" id="formFileSm" type="file">
-         </div>
-         <div class="mb-3">
-            <label for="formFileSm" class="form-label">Título</label>
-            <input class="form-control form-control-sm" id="formFileSm" type="text">
-         </div>
-         <div class="mb-3">
-            <label for="formFileSm" class="form-label">Fecha de Inicio</label>
-            <div class="col-6">
-               <input class="form-control form-control-sm" id="formFileSm" type="month">
-            </div>
-            <div class="mb-3">
-               <label for="formFileSm" class="form-label">Fecha de finalización</label>
-               <div class="col-6">
-                  <input class="form-control form-control-sm" id="formFileSm" type="month">
-               </div>
-               <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                  <label class="form-check-label" for="defaultCheck1">Actualidad</label>
-               </div>
-            </div>
-         </div>
-         <div class="mb-3">
-            <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><button type="button" class="btn btn-outline-primary mt-2">Cancelar</button></li>
-            <li class="list-group-item"> <button type="button" class="btn btn-outline-primary mt-2">Guardar</button></li>
-            </ul>
-         </div>
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm">
+   <div class="col-9 tab-content" id="v-pills-tabContent">
+      <input type="hidden" name="id">
+      <ul class="list-group list-group-horizontal">
+         <li class="list-group-item"><i class="fa-solid fa-pen-to-square" type="button"  data-bs-toggle="modal" data-bs-target="#educacionModal" title="editar"></i></li>
+      </ul>
+      <h3>Educación</h3>
+  <div class="mb-3">
+       <label for="establecimiento" class="form-label">Establecimiento</label>
+       <input  class="form-control"[ngClass]="{'is-invalid': form.get('establecimiento')?.errors && form.get('establecimiento')?.touched, 'is-valid': form.get('establecimiento')?.errors && form.get('establecimiento')?.touched}" formControlName="establecimiento" id="establecimiento"type="text">
+       <p class="text-danger" *ngIf="form.get('establecimiento')?.touched && form.get('establecimiento')?.errors?.['required']">
+         El establecimiento es requerido.
+       </p>
+     </div>
+
+     <div class="mb-3">
+       <label for="tituloEdu" class="form-label">Título</label>
+       <input class="form-control" [ngClass]="{'is-invalid': form.get('titulo')?.errors && form.get('titulo')?.touched, 'is-valid': form.get('titulo')?.errors && form.get('titulo')?.touched}" formControlName="titulo" id="tituloEdu" type="text" >
+       <p class="text-danger" *ngIf="form.get('titulo')?.touched && form.get('titulo')?.errors?.['required']">
+         El título es requerido.
+       </p>
+     </div>
+
+     <div class="mb-3">
+       <label for="logoEduc" class="form-label">Logo</label>
+       <input class="form-control" id="logoEduc" formControlName="logo" type="url">
+    </div>
+
+    <div class="mb-3">
+      <div class="col-6">
+         <label for="fechaInicioEd" class="form-label">Fecha de Inicio</label>
+      <input class="form-control" id="fechaInicioEd"  formControlName="fechaInicio"type="fecha" >
       </div>
-  
+   </div>
+
+    <div class="mb-3">
+      <div class="col-6">
+         <label for="fechaFinEd" class="form-label">Fecha de Finalización</label>
+         <input class="form-control" id="fechaFinEd"  formControlName="fechaFin" type="fecha" >
+      </div>
+   </div>
+
+    <div class="form-check form-switch">
+      <input class="form-check-input" role="switch" id="flexSwitchCheckDefaultEd"
+        formControlName="esEstudioActual" type="checkbox">
+      <label class="form-check-label" for="flexSwitchCheckDefaultEd">Es Estudio Actual?</label>
+    </div>
+
+    <div class="modal-footer">
+       <button type="button" (click)="limpiar()" class="btn btn-outline-primary mt-2" title="limpiar">Cancelar</button>
+       <button button type="submit" class="btn btn-outline-primary mt-2" title="guardar" >Guardar</button>
+     </div>
+   </div>
+ </form>
+<app-educacion-editar></app-educacion-editar>

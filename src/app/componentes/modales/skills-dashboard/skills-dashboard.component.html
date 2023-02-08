@@ -1,22 +1,32 @@
-  <div class="row">
-      <div class="col-7 tab-content" id="v-pills-tabContent">
-         <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><i class="fa-solid fa-pen-to-square" type="button"></i></li>
-            <li class="list-group-item"><i class="fa-solid fa-trash-can" type="button"></i></li>
-         </ul>
-         <h3>Habilidades</h3>
-          <div class="mb-3">
-         <input class="form-control form-control-sm" id="formFileSm" type="text" placeholder="Habilidad">
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="skillForm">
+   <div class="col-9 tab-content" id="v-pills-tabContent">
+      <input type="hidden" name="id">
+      <ul class="list-group list-group-horizontal">
+         <li class="list-group-item"><i class="fa-solid fa-pen-to-square" type="button"  data-bs-toggle="modal" data-bs-target="#skillModaledit" title="editar"></i></li>
+      </ul>
+      <h3>Habilidad</h3>
+      <div class="mb-3">
+         <input class="form-control form-control-sm" [ngClass]="{'is-invalid':NombreHabilidad?.errors && NombreHabilidad?.touched, 'is-valid':!NombreHabilidad?.errors && NombreHabilidad?.touched}" formControlName="nombreHabilidad"  type="text">
+         <div *ngIf="NombreHabilidad?.errors  && NombreHabilidad?.touched" class="invalid-feedback">    
+            <p *ngIf="NombreHabilidad?.hasError('required')">
+                La habilidad es requerida.
+            </p>
+         </div> 
             </div>
           <div class="mb-3">
-            <input class="form-control form-control-sm" id="formFileSm" type="text" placeholder="Porcentaje">
-          </div>
-         <div class="mb-3">
-            <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><button type="button" class="btn btn-outline-primary mt-2">Cancelar</button></li>
-            <li class="list-group-item"> <button type="button" class="btn btn-outline-primary mt-2">Guardar</button></li>
-            </ul>
-         </div>
-       </div>
-    </div>
- 
+            <label for="porcentaje" class="form-label">Modificar Porcentaje  (Escala 0-100)</label>
+            <input type="number" min="0" max="100"  formControlName="porcentaje" [ngClass]="{'is-invalid': Porcentaje?.errors && Porcentaje?.touched, 'is-valid': !Porcentaje?.errors && Porcentaje?.touched}">
+            <div *ngIf="Porcentaje?.errors  && Porcentaje?.touched" class="invalid-feedback">    
+               <p *ngIf="Porcentaje?.hasError('required')">
+                   El porcentaje es requerido.
+               </p>
+            </div> 
+         </div> 
+
+    <div class="modal-footer">
+       <button type="button" (click)="limpiar()" class="btn btn-outline-primary mt-2" title="limpiar">Cancelar</button>
+       <button button type="submit" class="btn btn-outline-primary mt-2" title="guardar" >Guardar</button>
+     </div>
+   </div>
+ </form>
+ <app-editar-skill></app-editar-skill>

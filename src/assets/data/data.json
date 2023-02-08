@@ -1,18 +1,18 @@
 {
 	"nombre":"Sonia Elisabet",
 	"apellido": "Silva",
-	"banner":"../../../assets/img/banner.png",
-	"fotop":"../../../assets/img/fotoperfil.png",
+	"foto_banner":"../../../assets/img/banner.png",
+	"foto_perfil":"../../../assets/img/fotoperfil.png",
 	"titulo":"Developer Full Stack",
-	"acerca":"Mi nombre es Sonia, voy adaptandome a los cambios estando en continua innovación. Me gusta afrontar los desafíos dando siempre lo mejor de mí.",
+	"acerca_de":"Mi nombre es Sonia, voy adaptandome a los cambios estando en continua innovación. Me gusta afrontar los desafíos dando siempre lo mejor de mí.",
 	"experiencia":[
 	{
 		"id":1,
 		"puesto":"Asesora Comercial",
 		"empresa":"Smg Life",
 		"logo":"../../../assets/img/logo_SMG.png",
-		"fechai":"Julio 2013",
-		"fechaf":"Diciembre 2020",
+		"fechaInicio":"Julio 2013",
+		"fechaFin":"Diciembre 2020",
 		"descripcion":"Comencé en el call center de la compañía, ofreciendo seguros enlatados de salud y sepelio manejando varios sponsor. Luego cambie de sector, donde asesoraba a socios del grupo SMG haciendo cross selling de los seguros de vida, ahorro y capitalización."
 	},
 	{
@@ -20,8 +20,8 @@
 		"puesto":"Telemarketer",
 		"empresa":"Clienting Group",
 		"logo":"../../../assets/img/clienting.jpg",
-		"fechai":"Febrero 2010",
-		"fechaf":"Junio 2013",
+		"fechaInicio":"Febrero 2010",
+		"fechaFin":"Junio 2013",
 		"descripcion":"Realizaba venta de productos intangibles de manera telefónica seguros de vida, salud y hogar manejando varios sponsor."
 
 	}
@@ -31,24 +31,24 @@
 		"id":1,
 		"establecimiento":"Argentina Programa",
 		"titulo":"Developer Full Stack",
-		"fechai":"Junio 2022",
-		"fechaf":"Enero 2023",
+		"fechaInicio":"Junio 2022",
+		"fechaFin":"Enero 2023",
 		"logo":"../../../assets/img/arg-programa.png"
 	},
 	{   
 		"id":2,
 	    "establecimiento":"Aapas",
 		"titulo":"Productor Asesor de Seguros",
-		"fechai":"Octubre 2013",
-		"fechaf":"Abril 2014",
+		"fechaInicio":"Octubre 2013",
+		"fechaFin":"Abril 2014",
 		"logo":"../../../assets/img/aapas.png"
 	},
 	{   
 		"id":3,
 	    "establecimiento":"Colegio Secundario Juan B. Justo",
 		"titulo":"Bachiller en Gestión y Administración",
-		"fechai":"Marzo 1993",
-		"fechaf":"Diciembre 1997",
+		"fechaInicio":"Marzo 1993",
+		"fechaFin":"Diciembre 1997",
 		"logo":"../../../assets/img/juanbjusto.jpg"
 	}
 ],
@@ -70,18 +70,18 @@
    },
    {
 	    "id":4,
-	    "habilidad":"Proactiva",
-	    "porcentaje":"65"
+	    "habilidad":"Java",
+	    "porcentaje":"40"
    },
    {
         "id":5,
-	    "habilidad":"Trabajo en equipo y comunicación",
+	    "habilidad":"Proactiva",
 		"porcentaje":"60"
    },
    {
 	    "id":6,
 	    "habilidad":"Adaptabilidad al cambio",
-	    "porcentaje":"80"
+	    "porcentaje":"50"
 }
 ],
     "proyectos":[

@@ -1,30 +1,86 @@
-
+<form [formGroup]="form"  (ngSubmit)="onEnviar($event)" name="datosPersonalesForm">
    <ul class="list-group list-group-horizontal">
-      <li class="list-group-item"><i class="fa-solid fa-pen-to-square" type="button"></i></li>
-      <li class="list-group-item"><i class="fa-solid fa-trash-can" type="button"></i></li>
+      <li class="list-group-item"><i class="fa-solid fa-pen-to-square" type="button" (click)=" cargarDetalle(info.id)" title="editar"></i></li>
    </ul>
    <h3>Editar Perfil</h3>
-   <div class="mb-3">
-       <label for="formFileSm" class="form-label">Nombre</label>
-       <input class="form-control form-control-sm" id="formFileSm" type="text">
-       <label for="formFileSm" class="form-label">Apellido</label>
-       <input class="form-control form-control-sm" id="formFileSm" type="text">
-       <div class="mb-3">
-          <label for="formFileSm" class="form-label">Título</label>
-          <input class="form-control form-control-sm" id="formFileSm" type="text">
-         
-          <label for="formFileSm" class="form-label">Foto de perfil </label>
-          <input class="form-control form-control-sm" id="formFileSm" type="file">
-          <label for="formFileSm" class="form-label">Foto de portada </label>
-          <input class="form-control form-control-sm" id="formFileSm" type="file">
-       </div>
-       <div class="mb-3">
-         <ul class="list-group list-group-horizontal">
-         <li class="list-group-item"><button type="button" class="btn btn-outline-primary mt-2">Cancelar</button></li>
-         <li class="list-group-item"><button type="button" class="btn btn-outline-primary mt-2">Guardar</button></li>
-         </ul>
+  <div class="mb-3">
+       <label for="nombre" class="form-label">Nombre</label>
+       <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched, 'is-valid':!Nombre?.errors && Nombre?.touched}" formControlName="nombre" id="nombre" type="text">
+       <div *ngIf="Nombre?.errors  && Nombre?.touched" class="invalid-feedback">    
+          <p *ngIf="Nombre?.hasError('required')">
+            El nombre es requerido.
+           </p>
+           <input type="hidden" name="" id="id">
+        </div>
+        
+       <label for="apellido" class="form-label">Apellido</label>
+       <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Apellido?.errors && Apellido?.touched, 'is-valid':!Apellido?.errors && Apellido?.touched}" formControlName="apellido"  id="apellido" type="text">
+       <div *ngIf="Apellido?.errors  && Apellido?.touched" class="invalid-feedback">    
+        <p *ngIf="Apellido?.hasError('required')">
+          El apellido es requerido.
+         </p>
       </div>
-    </div>
+      </div>
+       <div class="mb-3">
+          <label for="titulo" class="form-label">Título</label>
+          <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Titulo?.errors && Titulo?.touched, 'is-valid':!Titulo?.errors && Titulo?.touched}" formControlName="titulo" id="titulo"  type="text">
+          <div *ngIf="Titulo?.errors  && Titulo?.touched" class="invalid-feedback">    
+           <p *ngIf="Titulo?.hasError('required')">
+             El título es requerido.
+            </p>
+         </div>
+          <label for="fotoPerfil" class="form-label">Foto de perfil </label>
+          <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Foto_perfil?.errors && Foto_perfil?.touched, 'is-valid':!Foto_perfil?.errors && Foto_perfil?.touched}" formControlName="foto_perfil" id="fotoPerfil"  type="url">
+          <div *ngIf="Foto_perfil?.errors  && Foto_perfil?.touched" class="invalid-feedback">    
+           <p *ngIf="Foto_perfil?.hasError('required')">
+             La foto de perfil es requerida.
+            </p>
+         </div>
+          <label for="fotoPortada" class="form-label">Foto de portada </label>
+          <input class="form-control form-control-sm"[ngClass]="{'is-invalid':Banner?.errors && Banner?.touched, 'is-valid':!Banner?.errors && Banner?.touched}" formControlName="banner" id="fotoPortada"  type="url">
+          <div *ngIf="Banner?.errors  && Banner?.touched" class="invalid-feedback">    
+           <p *ngIf="Banner?.hasError('required')">
+             La foto de portada es requerida.
+            </p>
+         </div>
+       </div>
+    <div class="mb-3">
+         <label for="acercaDe" class="form-label">Acerca de </label>
+         <textarea class="form-control" [ngClass]="{'is-invalid':Acerca_de?.errors && Acerca_de?.touched, 'is-valid':!Acerca_de?.errors && Acerca_de?.touched}" formControlName="acerca_de" id="acercaDe" rows="2" ></textarea>
+         <div *ngIf="Acerca_de?.errors  && Acerca_de?.touched" class="invalid-feedback">    
+            <p *ngIf="Acerca_de?.hasError('required')">
+                La descripción es requerido.
+            </p>
+      </div>
+   </div>
+   <div class="mb-3">
+      <div>
+         <label for="email" class="form-label">Email </label>
+         <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Correo?.errors && Correo?.touched, 'is-valid':!Correo?.errors && Correo?.touched}" formControlName="correo" id="email" type="text">
+         <div *ngIf="Correo?.errors  && Correo?.touched" class="invalid-feedback">    
+          <p *ngIf="Correo?.hasError('required')">
+            El email es requerido.
+           </p>
+        </div>
+      
+        <label for="contraseña" class="form-label">Contraseña </label>
+         <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Contrasenia?.errors && Contrasenia?.touched, 'is-valid':!Contrasenia?.errors && Contrasenia?.touched}" formControlName="contrasenia" id="contraseña" type="password">
+         <div *ngIf="Contrasenia?.errors  && Contrasenia?.touched" class="invalid-feedback">    
+          <p *ngIf="Contrasenia?.hasError('required')">
+            La contraseña es requerida.
+           </p>
+        </div>
+       </div>
+      </div>
+
+<div class="mb-3">
+<ul class="list-group list-group-horizontal">
+<li class="list-group-item"><button type="button"  (click)="limpiar()" class="btn btn-outline-primary mt-2" title="limpiar">Cancelar</button></li>
+<li class="list-group-item"><button type="submit" class="btn btn-outline-primary mt-2"title="guardar">Guardar</button></li>
+</ul>
+</div>
+   
+  </form>
 
    
 

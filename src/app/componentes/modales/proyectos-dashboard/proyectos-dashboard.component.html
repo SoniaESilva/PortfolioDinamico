@@ -1,34 +1,54 @@
-
-   <div class="row">
-     <div class="col-7 tab-content" id="v-pills-tabContent">
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="proyectoForm">
+   <div class="col-9 tab-content" id="v-pills-tabContent">
+      <input type="hidden" name="id">
       <ul class="list-group list-group-horizontal">
-         <li class="list-group-item"><i class="fa-solid fa-pen-to-square" type="button"></i></li>
-         <li class="list-group-item"><i class="fa-solid fa-trash-can" type="button"></i></li>
+         <li class="list-group-item"><i class="fa-solid fa-pen-to-square" type="button"  data-bs-toggle="modal" data-bs-target="#proyectoModal" title="editar"></i></li>
       </ul>
-      <h3>Proyectos</h3>
-         <div class="mb-3">
-            <label for="formFileSm" class="form-label">Nombre del Proyecto</label>
-            <input class="form-control form-control-sm" id="formFileSm" type="text">
-         </div>
-         <div class="mb-3">
-            <label for="formFileSm" class="form-label">Breve descripción</label>
-            <label for="exampleFormControlTextarea1" class="form-label"></label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-         </div>
-            <div class="mb-3">
-              <label for="formFileSm" class="form-label">Foto del proyecto</label>
-               <input class="form-control form-control-sm" id="formFileSm" type="file">
-            </div>
-         <div class="mb-3">
-            <label for="formFileSm" class="form-label">URL</label>
-           <input class="form-control form-control-sm" id="formFileSm" type="url">
-         </div>
-         <div class="mb-3">
-            <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><button type="button" class="btn btn-outline-primary mt-2">Cancelar</button></li>
-            <li class="list-group-item"> <button type="button" class="btn btn-outline-primary mt-2">Guardar</button></li>
-            </ul>
-         </div>
+      <h3>Proyecto</h3>
+      <div class="mb-3">
+       <label for="nombreProye" class="form-label">Nombre del Proyecto</label>
+       <input  class="form-control" [ngClass]="{'is-invalid': form.get('nombre')?.errors && form.get('nombre')?.touched, 'is-valid': form.get('nombre')?.errors && form.get('nombre')?.touched}" id="nombreProye"  formControlName="nombre" type="text">
+       <p class="text-danger" *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['required']">
+         El nombre es requerido.
+       </p>
+     </div>
+
+   <div class="mb-3">
+       <label for="fotoProy" class="form-label">Foto del proyecto</label>
+       <input  class="form-control"  [ngClass]="{'is-invalid': form.get('foto')?.errors && form.get('foto')?.touched, 'is-valid': form.get('foto')?.errors && form.get('foto')?.touched}" formControlName="foto" id="fotoProy" type="url">
+       <p class="text-danger" *ngIf="form.get('foto')?.touched && form.get('foto')?.errors?.['required']">
+         La foto es requerida.
+       </p>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Breve descripción</label>
+      <textarea class="form-control" [ngClass]="{'is-invalid': form.get('descripcion')?.errors && form.get('descripcion')?.touched, 'is-valid': form.get('descripcion')?.errors && form.get('descripcion')?.touched}" formControlName="descripcion"id="exampleFormControlTextarea1" rows="2" ></textarea>
+      <p class="text-danger" *ngIf="form.get('descripcion')?.touched && form.get('descripcion')?.errors?.['required']">
+       La descripción es requerida
+      </p>
+    </div>
+
+    <div class="mb-3">
+      <div class="col-6">
+         <label for="fechaProy" class="form-label">Fecha</label>
+      <input class="form-control" [ngClass]="{'is-invalid': form.get('fecha')?.errors && form.get('fecha')?.touched, 'is-valid': form.get('fecha')?.errors && form.get('fecha')?.touched}" id="fechaProy"  formControlName="fecha" type="fecha" >
+      <p class="text-danger" *ngIf="form.get('fecha')?.touched && form.get('fecha')?.errors?.['required']">
+        La fecha es requerida.
+      </p>
       </div>
    </div>
-
+   <div class="mb-3">
+    <label for="urlProy" class="form-label">URL</label>
+    <input class="form-control" [ngClass]="{'is-invalid': form.get('url')?.errors && form.get('url')?.touched, 'is-valid': form.get('url')?.errors && form.get('url')?.touched}" id="urlProy" formControlName="url" type="url" >
+    <p class="text-danger" *ngIf="form.get('url')?.touched && form.get('url')?.errors?.['required']">
+      La URL es requerida.
+    </p>
+ </div>
+    <div class="modal-footer">
+       <button type="button" (click)="limpiar()" class="btn btn-outline-primary mt-2" title="limpiar">Cancelar</button>
+       <button button type="submit" class="btn btn-outline-primary mt-2" title="guardar" >Guardar</button>
+     </div>
+   </div>
+ </form>
+ <app-editar-proyectos></app-editar-proyectos>

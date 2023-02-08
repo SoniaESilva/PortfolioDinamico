@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from '../../servicios/portfolio.service';//Importamos el servicio
+import { Proye } from 'src/app/entidad/proye';
+import { ProyeService } from 'src/app/servicios/proye.service';
+
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
@@ -7,19 +9,18 @@ import { PortfolioService } from '../../servicios/portfolio.service';//Importamo
 })
 export class ProyectosComponent implements OnInit {
   title:string='Proyectos';
-  proyectosList:any;
+  proyectosList: Proye [] = [];
 
 
   // Inyectar el servicio para tener acceso en la clase a los métodos
-  constructor(private portfolioservice: PortfolioService) { }
+  constructor(private sProyecto : ProyeService) { }
   
   ngOnInit(): void {
-  //Esto es almacenar enla variable de instancia los datos recuperado por el servicio
-   this.portfolioservice.getDatos().subscribe(portfolio=>{
-    //definir informacion a mostrar
-       this.proyectosList=portfolio.proyectos;
-      });
+    this.traerProyecto();//usando proyeService
 
   }
-
+ //para traer la lista de educacion desde proyeService 
+ traerProyecto(): void {
+  this.sProyecto.lista().subscribe(data =>{this.proyectosList=data});
+ }
 }
