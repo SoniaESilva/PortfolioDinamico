@@ -38,7 +38,7 @@ get Contrasenia(){
   {
     event.preventDefault;
       this.autenticacionService.IniciarSesion(this.form.value).subscribe(data=>{
-        this.ruta.navigate(['/dashboard'])
+        this.ruta.navigate(['/dashboard']);
        })
   }
 }

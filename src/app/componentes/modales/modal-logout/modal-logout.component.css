@@ -1,4 +1,4 @@
-#exampleModal{
+#exampleModalLogout{
     background-color: rgba(78, 18, 38, 0.164);
     backdrop-filter: blur(12px) saturate(90%) brightness(120%);
     --bs-modal-width: 600px;

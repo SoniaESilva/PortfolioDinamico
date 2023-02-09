@@ -90,7 +90,7 @@ export class EditarProyectosComponent implements OnInit {
       }    
     }
       
-      //borrar la experiencia
+      //borrar el proyecto 
       borrar(id: number) {
         this.sProyecto.delete(id).subscribe(
           db => {

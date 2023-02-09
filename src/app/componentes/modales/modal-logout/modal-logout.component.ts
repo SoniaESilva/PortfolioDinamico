@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
@@ -9,13 +10,12 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 })
 export class ModalLogoutComponent implements OnInit {
 
-  constructor(private autenticacionService:AutenticacionService, private ruta:Router) { }
+  constructor(private autenticacionService:AutenticacionService, private rutas:Router) { }
 
   ngOnInit(): void {}
   
    onLogOut(): void{
-   
-    this.autenticacionService.logOut();
-    this.ruta.navigate(['/index']);
+  this.autenticacionService.cerrarSesion();
+    this.rutas.navigate(['/index']);
    }
 }

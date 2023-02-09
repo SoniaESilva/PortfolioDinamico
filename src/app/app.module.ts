@@ -33,13 +33,6 @@ import { EditarProyectosComponent } from './componentes/modales/editar-proyectos
 
 
 
-
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +60,8 @@ import { EditarProyectosComponent } from './componentes/modales/editar-proyectos
     EducacionEditarComponent,
     EditarSkillComponent,
     EditarProyectosComponent,
+    
+    
    
   
     

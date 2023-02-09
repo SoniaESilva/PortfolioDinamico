@@ -25,7 +25,8 @@ export class AutenticacionService {
     return this.currentUserSubject.value;
   }
   
- logOut(): void {
+ cerrarSesion(): void {
   window.sessionStorage.clear();
-}
+  //sessionStorage.removeItem('currentUser');
+ }
 }
