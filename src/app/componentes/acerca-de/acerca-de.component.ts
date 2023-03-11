@@ -9,7 +9,7 @@ import { PersoService } from 'src/app/servicios/perso.service';
 })
 export class AcercaDeComponent implements OnInit {
  //Inicializar variables de instancia para almacenar los datos
-   title:string='Acerca de mí';
+   //title:string='Acerca de mí';
    info:any;
    
    

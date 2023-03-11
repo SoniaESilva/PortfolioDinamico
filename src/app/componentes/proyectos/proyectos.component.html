@@ -1,19 +1,16 @@
 <section id="proyectos">
-    <h2 class="text-center">{{ title }} </h2>
-    <div class="container-fluid">
-       <div class="row" *ngFor="let proyectos of proyectosList">
-          <div class="col-3">
-             <img [src]="proyectos.foto" id="foto_proyecto" class="img-fluid">
-             <a href="{{ proyectos.url }}" id="link" target="_blank"><small>Ir al sitio</small></a>
-              </div>
-          <div class="col-7">
-              <ul>
-                <li><h4 class="titulo">{{ proyectos.nombre}}</h4></li>
-                 <p class="time">{{ proyectos.fecha }}</p>
-                 <p>{{ proyectos.descripcion }}<p>
-                  
-               </ul>
+    <h2 class="text-center">Proyectos </h2>
+   <div class="container-fluid">
+      <div class="row" *ngFor="let proyectos of proyectosList">
+         <div class="col-xs-8 col-sm-4 col-md-4 col-lg-4 text-center" >
+            <img [src]="proyectos.foto" id="foto_proyecto" alt="imagen_proyecto" class="img-fluid">
+            <br>
+            <time class="time">{{ proyectos.fecha }}</time>
+             </div>
+         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+             <h4 class="titulo">{{ proyectos.nombre}}</h4>
+                <p>{{ proyectos.descripcion }}<p> <a href="{{ proyectos.url }}" id="link" target="_blank" arial-label="link_proyecto"><small>Ir al sitio</small></a>
             </div>
-         </div>
-      </div>
+        </div>
+     </div>
 </section>

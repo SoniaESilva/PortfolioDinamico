@@ -9,7 +9,7 @@ import { Expe } from 'src/app/entidad/expe';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-title:string="Experiencia Laboral";
+//title:string="Experiencia Laboral";
 experienciaList : Expe [] =[];
 // Inyectar el servicio para tener acceso en la clase a los métodos
   constructor(private sExperiencia : ExpService) { }

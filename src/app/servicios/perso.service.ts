@@ -8,7 +8,7 @@ import { Perso } from '../entidad/perso';
   providedIn: 'root'
 })
 export class PersoService {
-  url = 'http://localhost:8080/persona/';
+  url = 'https://argprog-backend-6m1c.onrender.com/persona/';
   constructor(private httpClient:HttpClient) { }
 
    // trae la lista de Persona del backend

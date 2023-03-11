@@ -7,16 +7,14 @@
 
 #foto_proyecto{
     position: relative;
-    margin-top: 25px;
-    margin-left: 3rem;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
     border-radius: 2%;
     border: 1px solid rgb(117, 117, 121);
     height: auto;
-    width: 80%;
+    width: 70%;
 }
-#link{
-    margin-left: 8em;
-}
+
 .time{
     font-weight: bold;
     font-size: 14px;

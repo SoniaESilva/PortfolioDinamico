@@ -8,7 +8,7 @@ import { Proye } from '../entidad/proye';
   providedIn: 'root'
 })
 export class ProyeService {
-  url = 'http://localhost:8080/proyecto/';
+  url = 'https://argprog-backend-6m1c.onrender.com/proyecto/';
   constructor(private httpClient:HttpClient) { }
   // trae la lista de proyectos del backend
   public lista(): Observable<Proye[]>{

@@ -8,7 +8,7 @@ import { Expe } from '../entidad/expe';
   providedIn: 'root'
 })
 export class ExpService {
- url = 'http://localhost:8080/experiencia/';
+ url = 'https://argprog-backend-6m1c.onrender.com/experiencia/';
   constructor(private httpClient:HttpClient) { }
     // trae la lista de experiencia del backend
     public lista(): Observable<Expe[]>{

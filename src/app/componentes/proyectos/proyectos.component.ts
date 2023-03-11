@@ -8,7 +8,7 @@ import { ProyeService } from 'src/app/servicios/proye.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-  title:string='Proyectos';
+  //title:string='Proyectos';
   proyectosList: Proye [] = [];
 
 

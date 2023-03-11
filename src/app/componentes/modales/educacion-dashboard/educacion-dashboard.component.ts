@@ -22,8 +22,7 @@ export class EducacionDashboardComponent implements OnInit {
   fechaFin :[''],
   logo :[''],
   esEstudioActual :[''],
-  
-  
+  personaId :[1],
 })
   }
 

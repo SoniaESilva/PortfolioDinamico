@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 })
 export class AutenticacionService {
  
-  url='http://localhost:8080/persona/login';
+  url='https://argprog-backend-6m1c.onrender.com/persona/login';
   currentUserSubject: BehaviorSubject<any>;
   
   constructor(private http:HttpClient) {
@@ -16,8 +16,12 @@ export class AutenticacionService {
   }
 
   IniciarSesion(credenciales: any):Observable<any> {
-  return this.http.post(this.url, credenciales).pipe(map(data=>{
+    var httpOptions ={headers:new HttpHeaders({
+        'Content-Type': 'application/json'
+      })} 
+  return this.http.post(this.url, credenciales, httpOptions).pipe(map(data=>{
     sessionStorage.setItem('currentUser', JSON.stringify(data));
+    this.currentUserSubject.next(data);
    return data;
     }))
   }

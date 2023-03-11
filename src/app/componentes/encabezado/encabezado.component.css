@@ -8,8 +8,8 @@ header{
 }
 
 /* banner*/
-.banner{
-    height: 50vh;
+.fotoPortada{
+    height: 70vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

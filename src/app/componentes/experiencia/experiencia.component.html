@@ -1,20 +1,17 @@
 <section id="experiencia">
     <div class="container-fluid">
-       <h2 class="text-center">{{ title }}</h2>
+       <h2 class="text-center">Experiencia Laboral</h2>
        <div class="row" *ngFor="let experiencia of experienciaList">
-          <div class="col-2 text-center" >
-             <img [src]="experiencia.logo" class="img-fluid w-50" alt=" ">
+          <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4 text-center" >
+             <img [src]="experiencia.logo" class="img-fluid w-50" alt="logo_empresa">
              <br>
-             <time class="fecha">{{ experiencia.fechaInicio }}-{{ experiencia.fechaFin }}</time>
+             <time class="fecha">{{ experiencia.fechaInicio }}</time>-<time class="fecha">{{ experiencia.fechaFin }}</time>
           </div>
-          <div class="col-8">
-             <ul>
-                <li><h4>{{experiencia.puesto }}</h4></li>
-                <small class="empresa">{{ experiencia.empresa }}</small>
+          <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+             <h4>{{experiencia.puesto }}</h4>
+                <p><small class="empresa">{{ experiencia.empresa }}</small></p>
                 <p>{{ experiencia.descripcion }}</p>
-                
-             </ul>
-             </div>
+            </div>
        </div>
    </div>
   </section>

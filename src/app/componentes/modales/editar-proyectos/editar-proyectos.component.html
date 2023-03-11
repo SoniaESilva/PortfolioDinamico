@@ -44,7 +44,7 @@
 
           <div class="mb-3">
             <label for="fotoProye" class="form-label">Foto del proyecto</label>
-            <input  class="form-control"  [ngClass]="{'is-invalid': form.get('foto')?.errors && form.get('foto')?.touched, 'is-valid': form.get('foto')?.errors && form.get('foto')?.touched}"formControlName="foto" id="fotoProye"type="url">
+            <input  class="form-control"  [ngClass]="{'is-invalid': form.get('foto')?.errors && form.get('foto')?.touched, 'is-valid': form.get('foto')?.errors && form.get('foto')?.touched}"formControlName="foto" id="fotoProye"type="url" placeholder="Pegar Url de la foto">
             <p class="text-danger" *ngIf="form.get('foto')?.touched && form.get('foto')?.errors?.['required']">
               La foto es requerida.
             </p>
@@ -52,7 +52,7 @@
 
           <div class="mb-3">
             <label for="urlEdit" class="form-label">URL</label>
-            <input class="form-control" [ngClass]="{'is-invalid': form.get('url')?.errors && form.get('url')?.touched, 'is-valid': form.get('url')?.errors && form.get('url')?.touched}" formControlName="url" id="urlEdit" type="url" >
+            <input class="form-control" [ngClass]="{'is-invalid': form.get('url')?.errors && form.get('url')?.touched, 'is-valid': form.get('url')?.errors && form.get('url')?.touched}" formControlName="url" id="urlEdit" type="url" placeholder="Pegar Url del proyecto" >
             <p class="text-danger" *ngIf="form.get('url')?.touched && form.get('url')?.errors?.['required']">
               La URL es requerida.
             </p>

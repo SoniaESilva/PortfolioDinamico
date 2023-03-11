@@ -1,6 +1,6 @@
 /* grales*/
 #index_body{
-    background-color: rgb(220, 229, 235);
+    background-color: rgb(221, 237, 247);
 }
 h2{
     color: rgb(6, 7, 7);
@@ -8,7 +8,5 @@ h2{
     padding-bottom: 1%;
     margin-top: 1%;
 }
-.row{
-    padding-left: 10px;
-}
+
 

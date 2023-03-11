@@ -10,7 +10,7 @@ import { Skill } from 'src/app/entidad/skill';
 })
 export class SkillsComponent implements OnInit {
   //Inicializar variables de instancia para almacenar los datos
-  title:string = 'Hard Skills & Soft Skills';
+  //title:string = 'Hard Skills & Soft Skills';
  
   skillList: Skill[] =[];
 

@@ -9,7 +9,7 @@ import { Skill } from '../entidad/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  url = 'http://localhost:8080/skill/';
+  url = 'https://argprog-backend-6m1c.onrender.com/skill/';
 
 
   constructor(private httpClient:HttpClient) { }

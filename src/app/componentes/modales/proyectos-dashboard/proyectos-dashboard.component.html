@@ -2,7 +2,7 @@
    <div class="col-9 tab-content" id="v-pills-tabContent">
       <input type="hidden" name="id">
       <ul class="list-group list-group-horizontal">
-         <li class="list-group-item"><i class="fa-solid fa-pen-to-square" type="button"  data-bs-toggle="modal" data-bs-target="#proyectoModal" title="editar"></i></li>
+         <li class="list-group-item"><i class="fa-solid fa-pen-to-square fa-xl" type="button"  data-bs-toggle="modal" data-bs-target="#proyectoModal" title="editar"></i></li>
       </ul>
       <h3>Proyecto</h3>
       <div class="mb-3">
@@ -15,7 +15,7 @@
 
    <div class="mb-3">
        <label for="fotoProy" class="form-label">Foto del proyecto</label>
-       <input  class="form-control"  [ngClass]="{'is-invalid': form.get('foto')?.errors && form.get('foto')?.touched, 'is-valid': form.get('foto')?.errors && form.get('foto')?.touched}" formControlName="foto" id="fotoProy" type="url">
+       <input  class="form-control"  [ngClass]="{'is-invalid': form.get('foto')?.errors && form.get('foto')?.touched, 'is-valid': form.get('foto')?.errors && form.get('foto')?.touched}" formControlName="foto" id="fotoProy" type="url" placeholder="Pegar Url de la foto">
        <p class="text-danger" *ngIf="form.get('foto')?.touched && form.get('foto')?.errors?.['required']">
          La foto es requerida.
        </p>
@@ -40,7 +40,7 @@
    </div>
    <div class="mb-3">
     <label for="urlProy" class="form-label">URL</label>
-    <input class="form-control" [ngClass]="{'is-invalid': form.get('url')?.errors && form.get('url')?.touched, 'is-valid': form.get('url')?.errors && form.get('url')?.touched}" id="urlProy" formControlName="url" type="url" >
+    <input class="form-control" [ngClass]="{'is-invalid': form.get('url')?.errors && form.get('url')?.touched, 'is-valid': form.get('url')?.errors && form.get('url')?.touched}" id="urlProy" formControlName="url" type="url" placeholder="Pegar Url de la foto" >
     <p class="text-danger" *ngIf="form.get('url')?.touched && form.get('url')?.errors?.['required']">
       La URL es requerida.
     </p>

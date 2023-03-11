@@ -8,7 +8,7 @@ import { Edu } from '../entidad/edu';
   providedIn: 'root'
 })
 export class EduService {
-  url = 'http://localhost:8080/educacion/';
+  url = 'https://argprog-backend-6m1c.onrender.com/educacion/';
 
   constructor(private httpClient:HttpClient) { }
    // trae la lista de educación del backend

@@ -9,7 +9,7 @@ import { Edu } from 'src/app/entidad/edu';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  title:string="Educación";
+  //title:string="Educación";
   educacionList: Edu [] = [];
   
 
