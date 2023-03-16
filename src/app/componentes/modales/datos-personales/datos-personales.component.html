@@ -12,7 +12,8 @@
            </p>
            <input type="hidden" name="" id="id">
         </div>
-        
+      </div>
+      <div class="mb-3">
        <label for="apellido" class="form-label">Apellido</label>
        <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Apellido?.errors && Apellido?.touched, 'is-valid':!Apellido?.errors && Apellido?.touched}" formControlName="apellido"  id="apellido" type="text">
        <div *ngIf="Apellido?.errors  && Apellido?.touched" class="invalid-feedback">    
@@ -21,6 +22,7 @@
          </p>
       </div>
       </div>
+   
        <div class="mb-3">
           <label for="titulo" class="form-label">Título</label>
           <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Titulo?.errors && Titulo?.touched, 'is-valid':!Titulo?.errors && Titulo?.touched}" formControlName="titulo" id="titulo"  type="text">
@@ -29,6 +31,8 @@
              El título es requerido.
             </p>
          </div>
+      </div>
+      <div class="mb-3">
           <label for="fotoPerfil" class="form-label">Foto de perfil </label>
           <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Foto_perfil?.errors && Foto_perfil?.touched, 'is-valid':!Foto_perfil?.errors && Foto_perfil?.touched}" formControlName="foto_perfil" id="fotoPerfil"  type="url" placeholder="Pegar Url de la foto">
           <div *ngIf="Foto_perfil?.errors  && Foto_perfil?.touched" class="invalid-feedback">    
@@ -36,6 +40,8 @@
              La foto de perfil es requerida.
             </p>
          </div>
+      </div>
+         <div class="mb-3">
           <label for="fotoPortada" class="form-label">Foto de portada </label>
           <input class="form-control form-control-sm"[ngClass]="{'is-invalid':Banner?.errors && Banner?.touched, 'is-valid':!Banner?.errors && Banner?.touched}" formControlName="banner" id="fotoPortada"  type="url"  placeholder="Pegar Url de la foto">
           <div *ngIf="Banner?.errors  && Banner?.touched" class="invalid-feedback">    
@@ -54,15 +60,15 @@
       </div>
    </div>
    <div class="mb-3">
-      <div>
-         <label for="email" class="form-label">Email </label>
-         <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Correo?.errors && Correo?.touched, 'is-valid':!Correo?.errors && Correo?.touched}" formControlName="correo" id="email" type="text" readonly>
-         <div *ngIf="Correo?.errors  && Correo?.touched" class="invalid-feedback" >    
+      <label for="email" class="form-label">Email </label>
+      <input class="form-control form-control-sm" [ngClass]="{'is-invalid':Correo?.errors && Correo?.touched, 'is-valid':!Correo?.errors && Correo?.touched}" formControlName="correo" id="email" type="text" readonly>
+      <div *ngIf="Correo?.errors  && Correo?.touched" class="invalid-feedback" >    
           <p *ngIf="Correo?.hasError('required')">
             El email es requerido.
            </p>
         </div>
-      
+      </div>
+      <div class="mb-3">
         <label for="contraseña" class="form-label">Contraseña </label>
          <input class="form-control form-control-sm"  formControlName="contrasenia" id="contraseña" type="password" readonly>
          <div *ngIf="Contrasenia?.errors  && Contrasenia?.touched" class="invalid-feedback">    
@@ -71,16 +77,13 @@
            </p>
         </div>
        </div>
-      </div>
-
-<div class="mb-3">
-<ul class="list-group list-group-horizontal">
-<li class="list-group-item"><button type="button"  (click)="limpiar()" class="btn btn-outline-primary mt-2" title="limpiar">Cancelar</button></li>
-<li class="list-group-item"><button type="submit" class="btn btn-outline-primary mt-2"title="guardar">Guardar</button></li>
-</ul>
-</div>
-   
-  </form>
+ <div class="mb-3">
+   <ul class="list-group list-group-horizontal">
+    <li class="list-group-item"><button type="button"  (click)="limpiar()" class="btn btn-outline-primary mt-2" title="limpiar">Cancelar</button></li>
+     <li class="list-group-item"><button type="submit" class="btn btn-outline-primary mt-2"title="guardar">Guardar</button></li>
+     </ul>
+   </div>
+</form>
 
    
 

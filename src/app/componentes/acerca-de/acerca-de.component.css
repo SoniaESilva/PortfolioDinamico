@@ -1,10 +1,4 @@
-/* acerca de 
-#foto_nombre{
-    margin-top: 60px;
-    padding: 20px;
-    margin-left: 60px;
-    margin-bottom: 1%;
-}*/
+
 /*foto de perfil*/
 #foto{
     position: relative;
@@ -18,6 +12,9 @@
 }
 /*nombre*/
 #dato{
+    padding-left: 40px;
     font-weight: bold;
-    
 }
+ h5{
+    padding-left: 50px;
+ }

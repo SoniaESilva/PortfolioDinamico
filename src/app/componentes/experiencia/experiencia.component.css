@@ -1,17 +1,17 @@
 #experiencia{
-    margin:60px;
+    margin:20px;
     background-color: rgb(241, 245, 248);
     border-radius: 1em;
     padding-bottom: 2em;
 }
+
+.img-fluid{
+padding:10px ;
+}
 .fecha{
     font-size: 13px;
-    font-weight: bold;
-    padding-top: 9px;
+    padding: 5px;
 }
-ul{
-   list-style: none;
-}
-.empresa{
-    font-weight: bold;
+.row{
+    padding: 15px;
 }

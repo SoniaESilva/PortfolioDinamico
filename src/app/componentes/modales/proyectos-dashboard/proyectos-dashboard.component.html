@@ -32,7 +32,7 @@
     <div class="mb-3">
       <div class="col-6">
          <label for="fechaProy" class="form-label">Fecha</label>
-      <input class="form-control" [ngClass]="{'is-invalid': form.get('fecha')?.errors && form.get('fecha')?.touched, 'is-valid': form.get('fecha')?.errors && form.get('fecha')?.touched}" id="fechaProy"  formControlName="fecha" type="fecha" >
+      <input class="form-control" [ngClass]="{'is-invalid': form.get('fecha')?.errors && form.get('fecha')?.touched, 'is-valid': form.get('fecha')?.errors && form.get('fecha')?.touched}" id="fechaProy"  formControlName="fecha" type="date" >
       <p class="text-danger" *ngIf="form.get('fecha')?.touched && form.get('fecha')?.errors?.['required']">
         La fecha es requerida.
       </p>
